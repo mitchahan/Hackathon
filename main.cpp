@@ -1,5 +1,11 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <cmath>
+#include <algorithm>
+
 #include "Pantry.h"
-#include "database.h"
+#include "needy.h"
 #include "database.h"
 
 int main(){
