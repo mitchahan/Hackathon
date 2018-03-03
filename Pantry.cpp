@@ -1,5 +1,6 @@
 #include "Pantry.h"
 #include <iostream>
+#include <string>
 #include <fstream>
 
 Pantry::Pantry()
