@@ -1,4 +1,5 @@
 #include "database.h"
+#include "needy.h"
 #include <iostream>
 #include <vector>
 #include <string>
