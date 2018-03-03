@@ -11,8 +11,8 @@ Database::Database(Pantry p){
 void Database::sort(Needy j){
     
     //distance formula
-    currLongitutde = j.getLongitude(); //TODO lat and currLongitutde
-    currLatitude = j.getLatitude();
+    currLongitutde = j.getLong(); //TODO lat and currLongitutde
+    currLatitude = j.getLat();
     
     for(auto e:data_){ //iterate thru pantries
 
