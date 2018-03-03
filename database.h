@@ -12,6 +12,6 @@ public:
     
 private:
     std::vector<Pantry> data_;
-}
+};
 
 #endif
