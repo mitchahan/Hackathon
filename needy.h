@@ -5,7 +5,7 @@
 
 class Needy{
   public:
-  Needy(long_ = 0, lat_ = 0, food_ = 0, clothes_ = 0, water_ = 0, medicine = 0);
+  Needy(long_ = 0, lat_ = 0, food_ = 0, clothes_ = 0, water_ = 0, medicine_ = 0);
   
   void setLong(double _long){long_ = _long;}
   void setLat(double _lat){lat_ = _lat;}
