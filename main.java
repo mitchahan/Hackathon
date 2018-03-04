@@ -2,19 +2,48 @@
  * Created by Mitch Hansen on 3/3/2018.
  */
 import java.util.*;
+import com.google.android.gms.*;
+import com.google.android.gms.maps.MapView;
+
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.support.v4.app.*;
+import android.view.*;
+import android.R.*;
 
 public class main {
     private Map<Pantry, Integer> theMap;
+    private static double long_;
+    private static double lat_;
+
 
     public static void main(String[] args) {
+        locInit();
+        Needy n = new Needy();
+        n.setLong(long_);
+        n.setLat(lat_);
+        ArrayList<Pantry> p;
+        p = new ArrayList<>();
+        Pantry testPantry = new Pantry(37.352529, -121.943594);
+        p.add(testPantry);
+
+        Map<Pantry, Integer> scoreList = scoreC(p, n);
+
 
     }
 
-    public void scoreC(ArrayList<Pantry> p, Needy n) {
+    public static void locInit() {
+        long_ = 37.349850;
+        lat_ = -121.939427;
+    }
 
 
-        double currLongitutde = n.getLong(); //TODO lat and currLongitutde
-        double currLatitude = n.getLat();
+    public static Map<Pantry, Integer> scoreC(ArrayList<Pantry> p, Needy n) {
+
+
+        //double currLongitutde = n.getLong(); //TODO lat and currLongitude
+        //double currLatitude = n.getLat();
 
 
         for(int x = 0; x < p.size(); ++x){ //iterate thru pantries
@@ -42,7 +71,13 @@ public class main {
             if (p.get(x).getMedicine() > 0 && n.getM()) {
                 score += 2;
             }
-            theMap.put(p.get(x), score);
+
+            
+            MapView map = (MapView) findViewById(R.id.mapView);
+            
+            //map.put(p.get(x), score);
+            map.
         }
+        return map;
     }
 }
