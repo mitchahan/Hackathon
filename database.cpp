@@ -23,7 +23,7 @@ void Database::sort(Needy j){
      */
         double distance;
         distance = sqrt((e.getLatitude()-currLatitude)^2 + (e.getLongitude() - currLongitutde)^2)
-        score = 20 - distance^2;
+        int score = 20 - distance^2;
         
         if(e.getFood() > 0 && j.getFood()){
             score += 2;
